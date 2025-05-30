@@ -5,3 +5,10 @@
 # The interesting part of this task is that you have to do it without string operation (hey, it's not really interesting otherwise)
 
 # ;)
+
+def hamming_weight(n: int) -> int:
+    count = 0
+    while n:
+        n &= n - 1
+        count += 1
+    return count
