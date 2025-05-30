@@ -1,0 +1,12 @@
+def cannons_ready(gunners):
+    """
+    Check if all gunners are ready.
+
+    :param gunners: dict of gunner_name -> 'aye' or 'nay'
+    :return: 'Fire!' if everyone says 'aye', otherwise 'Shiver me timbers!'
+    """
+    return (
+        'Fire!'
+        if all(status == 'aye' for status in gunners.values())
+        else 'Shiver me timbers!'
+    )
